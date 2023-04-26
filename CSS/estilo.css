@@ -1,0 +1,36 @@
+*{
+    padding: 10px;
+    background-color:#F3F0E8;
+}
+body, header, footer {
+    border:3px #806930 solid;
+    min-height: 50px;
+    margin: 0.5rem
+}
+main {
+    border:3px #806930 solid;
+    min-height: 100px;
+    margin: 0.5rem;
+    color:#806930;
+    
+}
+section{
+    font-family: 'Courgette', cursive;
+}
+header{    
+    font-family: 'Courgette', cursive;
+    font-size: 18px;
+}
+.header-menubar{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+} 
+section{
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+    

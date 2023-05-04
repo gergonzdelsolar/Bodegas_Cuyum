@@ -5,6 +5,7 @@
 
 body, header, footer {
     min-height: 100px;
+    align-content: center;
 }
 
 main {

@@ -70,7 +70,28 @@ header {
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;
+    border: 2px solid green;
 }
+
+/* INICIO SECCIÓN TURISMO ENOLÓGICO */
+section{
+    border: 2px solid red;
+    min-height: 300px;
+}
+
+.contenedor-grilla{
+    border: 2px solid blue;
+    min-width: 50%;
+    min-height: 100vh;
+}
+
+.contenedor-formulario{
+    border: 2px solid orange;
+    min-width: 50%;
+    min-height: 100vh;
+}
+
+/* FIN SECCIÓN TURISMO ENOLÓGICO */
 
 .item-item1 {
     grid-column-start: 2;

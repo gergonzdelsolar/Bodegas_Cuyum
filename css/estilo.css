@@ -2,6 +2,10 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
+}
+
+body{
     background-color: #F3F0E8;
 }
 
@@ -30,19 +34,29 @@ header {
     top: 0px;
     font-family: 'Courgette', cursive;
     font-size: 14px;
-    min-height: 50px;
+    min-height: 1%;
     margin: 0;
     padding: 0;
     box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
+    /* border: 2px solid red; */
+    background-color: #F3F0E8;
+    z-index: 100;
+}
+
+nav{
+    /* border: 1px solid red; */
+    /* padding-top: 10px; */
+    padding-bottom: 0;
 }
 
 .nav_links {
     list-style: none;
-
+    margin: 0;
     /* border: 2px solid black; */
 }
 
 .nav_links li {
+    
     display: inline-block;
     margin: 10px;
     padding: 0px 20px;
@@ -61,7 +75,7 @@ header {
     margin-right: 30px;
 }
 
-button {
+.boton {
     color: white;
     margin: 10px;
     padding: 10px 10px;
@@ -72,23 +86,24 @@ button {
     transition: all 0.3s ease 0s;
 }
 
-button:hover {
+.boton:hover {
     background-color: rgb(144, 39, 23);
 }
 
-.header-menubar {
+/* .header-menubar {
     display: flex;
     margin-right: 50%;
     margin-left: 5%;
     justify-content: space-between;
     align-items: center;
-}
+} */
 
 main {
     min-height: 10px;
     color: #806930;
     font-family: 'Great Vibes', cursive;
     font-size: 22px;
+    background-color: #F3F0E8;
 }
 
 .header-menubar {
@@ -109,39 +124,94 @@ main {
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;
-    border: 2px solid green;
+    margin-top: 5%;
+    /* border: 2px solid green; */
+    background-color: #F3F0E8;
 }
 
 /* INICIO SECCIÓN TURISMO ENOLÓGICO */
 
 .contenedor-turismo {
-    box-sizing: border-box;
-    border: 2px solid green;
-    min-height: 100vh;
-    min-width: 100%;
-    margin: 0;
+    /* border: 2px solid green; */
+    min-height: 100px;
+    width: 90%;
+    margin: 2% 5%;
     padding: 0;
     display: flex;
+    overflow: auto;
+    position: relative;
+    border-radius: 10px;
+}
 
+.contenedor-turismo::before{
+    content: '';
+    background-image: url(../img/pexels-jill-wellington-39351.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.25;
 }
 
 .contenedor-grilla {
-    box-sizing: border-box;
-    border: 2px solid blue;
+    display: flex;
+    flex-flow: row wrap;
+    /* border: 2px solid blue; */
     width: 50%;
     min-width: 30%;
-    min-height: 100vh;
-    margin: 10px;
+    min-height: 100px;
+    /* margin: 10px; */
+    gap: 0px;
+    padding: 10px;
+    position: relative;
+    background-color: transparent;
 }
 
 .contenedor-formulario {
-    box-sizing: border-box;
+
     border: 2px solid orange;
     width: 50%;
     min-width: 30%;
-    min-height: 100vh;
-    margin: 10px;
+    min-height: 100px;
+    margin: 0;
+    padding: 10px;
+    position: relative;
 }
+
+
+.imagen {
+    width: 50%;
+    text-align: center;
+    /* border: 2px solid brown; */
+    padding: 5px;
+}
+
+.texto1 {
+    padding: 10px;
+    width: 50%;
+    text-align: justify;
+    /* border: 2px solid blueviolet; */
+}
+
+.texto2 {
+    padding: 10px;
+    width: 50%;
+    text-align: justify;
+    /* border: 2px solid hotpink; */
+}
+
+
+.tur-imagen {
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+
 
 /* FIN SECCIÓN TURISMO ENOLÓGICO */
 
@@ -171,4 +241,6 @@ footer {
     justify-content: space-evenly;
     align-content: end;
     min-height: 50px;
+    /* border: 2px solid black; */
+    background-color: #F3F0E8;
 }

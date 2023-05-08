@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    background-color: #F3F0E8;
+}
+
+li, a, button {
+    font-family: 'Courgette', cursive, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+a:link, a:visited {
+    color: #806930;
+}
+
+a:hover {
+    background: #f0e8d2;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    position: sticky;
+    top: 0px;
+    font-family: 'Courgette', cursive;
+    font-size: 14px;
+    min-height: 1%;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
+    /* border: 2px solid red; */
+    background-color: #F3F0E8;
+    z-index: 100;
+}
+
+nav{
+    /* border: 1px solid red; */
+    /* padding-top: 10px; */
+    padding-bottom: 0;
+}
+
+.nav_links {
+    list-style: none;
+    margin: 0;
+    /* border: 2px solid black; */
+}
+
+.nav_links li {
+    
+    display: inline-block;
+    margin: 10px;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.contacto {
+    /* border: 2px solid black; */
+    margin-right: 30px;
+}
+
+.boton {
+    color: white;
+    margin: 10px;
+    padding: 10px 10px;
+    background-color: rgb(190, 72, 53);
+    border: none;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.boton:hover {
+    background-color: rgb(144, 39, 23);
+}
+
+/* .header-menubar {
+    display: flex;
+    margin-right: 50%;
+    margin-left: 5%;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+main {
+    min-height: 10px;
+    color: #806930;
+    font-family: 'Great Vibes', cursive;
+    font-size: 22px;
+    background-color: #F3F0E8;
+}
+
+.header-menubar {
+    padding: 0;
+    display: flex;
+    margin-left: 5%;
+    margin-right: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+.container {
+    display: grid;
+    column-gap: 40px;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    /* border: 2px solid green; */
+    background-color: #F3F0E8;
+}
+
+/* INICIO SECCIÓN TURISMO ENOLÓGICO */
+
+.contenedor-turismo {
+    /* border: 2px solid green; */
+    min-height: 100px;
+    width: 90%;
+    margin: 2% 5%;
+    padding: 0;
+    display: flex;
+    overflow: auto;
+    position: relative;
+    border-radius: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contenedor-turismo::before{
+    content: '';
+    background-image: url(../img/pexels-jill-wellington-39351.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.25;
+}
+
+.contenedor-grilla {
+    display: flex;
+    flex-flow: row wrap;
+    /* border: 2px solid blue; */
+    width: 50%;
+    
+    min-height: 100px;
+    /* margin: 10px; */
+    gap: 0px;
+    padding: 10px;
+    position: relative;
+    background-color: transparent;
+}
+
+.contenedor-formulario {
+
+    border: 2px solid orange;
+    width: 50%;
+    min-height: 100px;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+}
+
+.imagen {
+    width: 50%;
+    text-align: center;
+    /* border: 2px solid brown; */
+    padding: 5px;
+}
+
+.texto {
+    padding: 10px;
+    width: 50%;
+    text-align: justify;
+    /* border: 2px solid blueviolet; */
+}
+
+.tur-imagen {
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* FIN SECCIÓN TURISMO ENOLÓGICO */
+
+.item-item1 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.item-item2 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.item-item3 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30%;
+    margin-right: 30%;
+    justify-content: space-evenly;
+    align-content: end;
+    min-height: 50px;
+    /* border: 2px solid black; */
+    background-color: #F3F0E8;
+}

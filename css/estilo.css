@@ -141,6 +141,8 @@ main {
     overflow: auto;
     position: relative;
     border-radius: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .contenedor-turismo::before{
@@ -162,7 +164,7 @@ main {
     flex-flow: row wrap;
     /* border: 2px solid blue; */
     width: 50%;
-    min-width: 30%;
+    
     min-height: 100px;
     /* margin: 10px; */
     gap: 0px;
@@ -175,7 +177,6 @@ main {
 
     border: 2px solid orange;
     width: 50%;
-    min-width: 30%;
     min-height: 100px;
     margin: 0;
     padding: 10px;

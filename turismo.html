@@ -9,12 +9,24 @@
     <link rel="shortcut icon" href="favicon/favicon-32x32.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <style>
+        .input-group-append {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -34,42 +46,114 @@
 
     </header>
     <main>
-        <div class="contenedor-turismo">
+        <h3 class="titulo-turismo">Turismo enológico</h3>
+        <div class="contenedor-turismo"><!-- alias row  -->
 
-            <div class="contenedor-grilla">
+            <div class="column">
 
-                <div class="imagen">
+
+                <div class="column2">
                     <img class="tur-imagen" src="img/jim-harris-zDlusnb3G3Q-unsplash.jpg" alt="">
                 </div>
 
-                <div class="texto">
+                <div class="column2">
                     <p>Les informamos que desde turismo de Bodega Cuyum se ofrecen visitas guiadas de martes a domingos
                         y feriados, con reserva previa.</p>
                     <p>Disfrute de nuestras excursiones guiadas para descubrir cada rincón de nuestra bodega.</p>
                 </div>
-
-                <div class="texto">
+                <div class="column2">
+                    <img class="tur-imagen" src="img/kelsey-knight-udj2tD3WKsY-unsplash.jpg" alt="">
+                </div>
+                <div class="column2">
                     <p>Conozca al detalle la elaboración de nuestros exquisitos vinos. Lorem, ipsum dolor sit amet
                         consectetur adipisicing elit. Expedita, hic? Tenetur ex maiores vel totam eaque, doloremque
                         quaerat consequatur quia laborum autem culpa quas alias. </p>
                 </div>
 
-                <div class="imagen">
-                    <img class="tur-imagen" src="img/kelsey-knight-udj2tD3WKsY-unsplash.jpg" alt="">
-                </div>
-                <div class="imagen">
+                <div class="column2">
                     <img class="tur-imagen" src="img/maksym-kaharlytskyi-3uJt73tr4hI-unsplash.jpg" alt="">
                 </div>
-                <div class="texto">
+
+                <div class="column2">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolores et sapiente cupiditate ad
                         cum ducimus minus, labore dignissimos fugit quod sequi nulla repudiandae voluptatibus aut sit
                         aliquam architecto tenetur?</p>
                 </div>
+
+                <div class="column2">
+                    <img class="tur-imagen" src="img/pexels-grape-things-3840335.jpg" alt="">
+                </div>
+                <div class="column2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolores et sapiente cupiditate ad
+                        cum ducimus minus, labore dignissimos fugit quod sequi nulla repudiandae voluptatibus aut sit
+                        aliquam architecto tenetur?</p>
+                </div>
+
             </div>
 
-            <div class="contenedor-formulario"></div>
+            <div class="column">
+                <div class="column-form">
+                    <div class="titulo-form">
+                        <h3>Reserve su visita guiada:</h3>
+                    </div>
 
+                    <form>
+
+                        <div class="row-form">
+                            <label for="nombreInput" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombreInput" placeholder="Escribe tu nombre">
+                        </div>
+
+                        <div class="row-form">
+                            <label for="apellidoInput" class="form-label">Apellido:</label>
+                            <input type="text" class="form-control" id="apellidoInput"
+                                placeholder="Escribe tu apellido">
+                        </div>
+
+                        <div class="row-form">
+                            <label for="emailInput" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="Escribe tu email">
+                        </div>
+
+                        <!-- <div class="col-6">
+                            <label for="fechaInput" class="form-label">Fecha de reserva:</label>
+                            <input type="date" class="form-control" id="fechaInput" placeholder="Elije dia de reserva">
+                        </div> -->
+
+                        <div class="row-form">
+                            <label for="date" class="col-form-label">Fecha de reserva</label>
+
+                            <div class="input-group date" id="datepicker">
+                                <input type="text" class="form-control" id="date" />
+                                <span class="input-group-append">
+                                    <span class="input-group-text bg-light d-block">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row-form">
+                            <div class="form-group">
+                                <label for="time">Horario de visita:</label>
+                                <div class="input-group date" id="timePicker">
+                                    <input type="text" class="form-control timePicker">
+                                    <span class="input-group-addon"><i class="fa fa-clock"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="boton-enviar mt-3">
+                            <button type="submit" class="btn btn-primary">Enviar solicitud de reserva</button>
+                        </div>
+                </div>
+                </form>
+
+            </div>
         </div>
+
+
     </main>
     <footer>
         <div class="item-footer1">
@@ -89,10 +173,44 @@
                     src="img/youtube-logo-24.png" alt="youtube"></a>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+
+
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+<script>
+    $(function () {
+        $('#datepicker').datepicker();
+    });
+
+
+    var firstOpen = true;
+    var time;
+
+    $('#timePicker').datetimepicker({
+        useCurrent: false,
+        format: "hh:mm A"
+    }).on('dp.show', function () {
+        if (firstOpen) {
+            time = moment().startOf('day');
+            firstOpen = false;
+        } else {
+            time = "01:00 PM"
+        }
+        $(this).data('DateTimePicker').date(time);
+    });
+</script>
 
 </html>

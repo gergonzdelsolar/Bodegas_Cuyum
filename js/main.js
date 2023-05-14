@@ -20,6 +20,7 @@ form.addEventListener("submit", e => {
 
     parrafo.innerHTML = ""
 
+    console.log(nombre.value.trim().length);
 
     if (nombre.value.length == 0) {
         warnings += `Falta introducir nombre <br>`;
@@ -27,7 +28,20 @@ form.addEventListener("submit", e => {
     } else if (nombre.value.length < 3) {
         warnings += `El nombre no es válido <br>`;
         entrar = true;
+    } else if (nombre.value.length >= 3) {
+
+        for (var i = 0; i < nombre.value.trim().length; i++) {
+            var charCode = nombre.value.charCodeAt(i);
+            if (!((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode === 32)) {
+                warnings += `El campo 'nombre' solo puede contener caracteres alfabéticos y espacios.<br>`;
+                entrar = true;
+                break;
+            }
+        }
+
     }
+
+
 
     if (apellido.value.length == 0) {
         warnings += `Falta introducir apellido <br>`;
@@ -35,6 +49,17 @@ form.addEventListener("submit", e => {
     } else if (apellido.value.length < 3) {
         warnings += `El apellido no es válido <br>`;
         entrar = true;
+    }else if (apellido.value.length >= 3) {
+
+        for (var i = 0; i < apellido.value.trim().length; i++) {
+            var charCode = apellido.value.charCodeAt(i);
+            if (!((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode === 32)) {
+                warnings += `El campo 'apellido' solo puede contener caracteres alfabéticos y espacios.<br>`;
+                entrar = true;
+                break;
+            }
+        }
+
     }
 
 

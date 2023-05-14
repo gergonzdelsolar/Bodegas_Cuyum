@@ -97,47 +97,38 @@
                         <h3>Reserve su visita guiada:</h3>
                     </div>
 
-                    <form>
+                    <form action="" method="post" id="formulario">
 
                         <div class="row-form">
                             <label for="nombreInput" class="form-label">Nombre:</label>
-                            <input type="text" class="form-control" id="nombreInput" placeholder="Escribe tu nombre">
+                            <input type="text" class="form-control" id="nombre" name="nombre"
+                                placeholder="Escribe tu nombre" maxlength="20">
                         </div>
 
                         <div class="row-form">
                             <label for="apellidoInput" class="form-label">Apellido:</label>
-                            <input type="text" class="form-control" id="apellidoInput"
-                                placeholder="Escribe tu apellido">
+                            <input type="text" class="form-control" id="apellido" name="apellido"
+                                placeholder="Escribe tu apellido" maxlength="20">
                         </div>
 
                         <div class="row-form">
                             <label for="emailInput" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="emailInput" placeholder="Escribe tu email">
+                            <input type="text" class="form-control" id="email" name="email"
+                                placeholder="Escribe tu email">
                         </div>
 
-                        <!-- <div class="col-6">
-                            <label for="fechaInput" class="form-label">Fecha de reserva:</label>
-                            <input type="date" class="form-control" id="fechaInput" placeholder="Elije dia de reserva">
-                        </div> -->
-
                         <div class="row-form">
-                            <label for="date" class="col-form-label">Fecha de reserva</label>
-
-                            <div class="input-group date" id="datepicker">
-                                <input type="text" class="form-control" id="date" />
-                                <span class="input-group-append">
-                                    <span class="input-group-text bg-light d-block">
-                                        <i class="fa fa-calendar"></i>
-                                    </span>
-                                </span>
-                            </div>
+                            <label for="fechaInput" class="form-label">Fecha de reserva:</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha"
+                                placeholder="Elije dia de reserva">
                         </div>
 
                         <div class="row-form">
                             <div class="form-group">
                                 <label for="time">Horario de visita:</label>
                                 <div class="input-group date" id="timePicker">
-                                    <input type="text" class="form-control timePicker">
+                                    <input type="text" id="horario" class="form-control timePicker"
+                                        placeholder="Elija su horario de visita">
                                     <span class="input-group-addon"><i class="fa fa-clock"
                                             aria-hidden="true"></i></span>
                                 </div>
@@ -145,11 +136,12 @@
                         </div>
 
                         <div class="boton-enviar mt-3">
-                            <button type="submit" class="btn btn-primary">Enviar solicitud de reserva</button>
+                            <button type="submit" class="btn btn-primary">Solicitar reserva</button>
+                            <p class="warnings" id="warnings"></p>
                         </div>
-                </div>
-                </form>
 
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -190,6 +182,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
+
 <script>
     $(function () {
         $('#datepicker').datepicker();
@@ -212,5 +205,7 @@
         $(this).data('DateTimePicker').date(time);
     });
 </script>
+<script src="js/main.js"></script>
+
 
 </html>

@@ -135,6 +135,21 @@ main {
 /* INICIO SECCIÓN TURISMO ENOLÓGICO */
 
 
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #B06AB3;
+    padding-top: 20px;
+}
+
+.warnings{
+    font-family: Montserrat, sans-serif;
+    font-size: small;
+    color: red;
+   font-weight: bolder;
+}
+
 .contenedor-turismo {
     /* border: 2px solid green; */
     min-height: 100px;

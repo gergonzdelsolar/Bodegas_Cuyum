@@ -49,7 +49,7 @@ form.addEventListener("submit", e => {
     } else if (apellido.value.length < 3) {
         warnings += `El apellido no es válido <br>`;
         entrar = true;
-    }else if (apellido.value.length >= 3) {
+    } else if (apellido.value.length >= 3) {
 
         for (var i = 0; i < apellido.value.trim().length; i++) {
             var charCode = apellido.value.charCodeAt(i);

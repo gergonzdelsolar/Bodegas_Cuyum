@@ -96,8 +96,7 @@
                     <div class="titulo-form">
                         <h3>Reserve su visita guiada:</h3>
                     </div>
-
-                    <form action="" method="post" id="formulario">
+                    <form action="" method="POST" id="formulario" name="formulario">
 
                         <div class="row-form">
                             <label for="nombreInput" class="form-label">Nombre:</label>
@@ -127,7 +126,7 @@
                             <div class="form-group">
                                 <label for="time">Horario de visita:</label>
                                 <div class="input-group date" id="timePicker">
-                                    <input type="text" id="horario" class="form-control timePicker"
+                                    <input type="text" id="horario" name="horario" class="form-control timePicker"
                                         placeholder="Elija su horario de visita">
                                     <span class="input-group-addon"><i class="fa fa-clock"
                                             aria-hidden="true"></i></span>
@@ -136,16 +135,21 @@
                         </div>
 
                         <div class="boton-enviar mt-3">
-                            <button type="submit" class="btn btn-primary">Solicitar reserva</button>
+                            <input type="submit" class="btn btn-success" id="button" value="Solicitar Reserva">
+                            <!-- <button type="submit" class="btn btn-primary">Solicitar reserva</button> -->
                             <p class="warnings" id="warnings"></p>
                         </div>
 
                     </form>
+                    <script type="text/javascript"
+                        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                    <script type="text/javascript">
+                        emailjs.init('9pICVSXQlbx2ZfdXo')
+                    </script>
                 </div>
             </div>
         </div>
-
-
     </main>
     <footer>
         <div class="item-footer1">
@@ -166,9 +170,9 @@
         </div>
     </footer>
 
-
-
 </body>
+
+<!-- SCRIPTS DE ENLACES A LIBRERIAS COMO BOOTSTRAP Y CONTROLES DE FORMULARIOS COMO FECHA Y HORARIOS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
@@ -182,7 +186,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
-
+<!-- SCRIPT QUE CONTROLA EL CONTROL DE SELECTOR DE HORARIOS -->
 <script>
     $(function () {
         $('#datepicker').datepicker();
@@ -205,6 +209,8 @@
         $(this).data('DateTimePicker').date(time);
     });
 </script>
+
+<!-- ENLACE A SCRIPT DE VALIDACION DE FORMULARIO Y ENVIO DE EMAIL -->
 <script src="js/main.js"></script>
 
 

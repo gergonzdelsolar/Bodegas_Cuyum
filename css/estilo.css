@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 * {
     box-sizing: border-box;
+
+}
+
+body {
+    background-color: #F3F0E8;
     padding: 0;
     margin: 0;
-
+    font-family: Montserrat, sans-serif;
 }
 
-body{
-    background-color: #F3F0E8;
-}
-
-li, a, button {
-    font-family: 'Courgette', cursive, Verdana, Geneva, Tahoma, sans-serif;
+li, a {
+    /* font-family: 'Courgette', cursive, Verdana, Geneva, Tahoma, sans-serif; */
     font-size: 14px;
     text-decoration: none;
 }
@@ -43,7 +46,7 @@ header {
     z-index: 100;
 }
 
-nav{
+nav {
     /* border: 1px solid red; */
     /* padding-top: 10px; */
     padding-bottom: 0;
@@ -56,7 +59,7 @@ nav{
 }
 
 .nav_links li {
-    
+
     display: inline-block;
     margin: 10px;
     padding: 0px 20px;
@@ -131,11 +134,27 @@ main {
 
 /* INICIO SECCIÓN TURISMO ENOLÓGICO */
 
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #B06AB3;
+    padding-top: 20px;
+}
+
+.warnings{
+    font-family: Montserrat, sans-serif;
+    font-size: small;
+    color: red;
+   font-weight: bolder;
+}
+
 .contenedor-turismo {
     /* border: 2px solid green; */
     min-height: 100px;
     width: 90%;
-    margin: 2% 5%;
+    margin: 0% 5%;
     padding: 0;
     display: flex;
     overflow: auto;
@@ -145,7 +164,7 @@ main {
     flex-wrap: wrap;
 }
 
-.contenedor-turismo::before{
+.contenedor-turismo::before {
     content: '';
     background-image: url(../img/pexels-jill-wellington-39351.jpg);
     background-repeat: no-repeat;
@@ -157,49 +176,92 @@ main {
     bottom: 0;
     right: 0;
     opacity: 0.25;
+    display: flex;
+    overflow: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.contenedor-grilla {
+.column {
     display: flex;
     flex-flow: row wrap;
     /* border: 2px solid blue; */
     width: 50%;
-    
     min-height: 100px;
     /* margin: 10px; */
     gap: 0px;
     padding: 10px;
     position: relative;
     background-color: transparent;
+    flex: 50%;
 }
 
-.contenedor-formulario {
-
-    border: 2px solid orange;
-    width: 50%;
-    min-height: 100px;
-    margin: 0;
-    padding: 10px;
-    position: relative;
+.column-form {
+    font-family: Montserrat, sans-serif;
+    /* border: 2px solid red; */
+    width: 100%;
+    text-align: left;
+    padding-top: 10px;
+    padding: 20px;
 }
 
-.imagen {
-    width: 50%;
+.titulo-form {
     text-align: center;
-    /* border: 2px solid brown; */
-    padding: 5px;
+    font-family: 'Courgette', sans-serif;
 }
 
-.texto {
+.row-form {
+    font-size: medium;
+    font-family: 'Courgette', sans-serif;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.form-label {
+    text-align: left;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: rgb(190, 72, 53) !important;
+
+}
+
+.column2 {
     padding: 10px;
     width: 50%;
     text-align: justify;
+    font-family: 'Courgette', sans-serif;
+    font-size: medium;
+    flex: 50%;
     /* border: 2px solid blueviolet; */
 }
 
 .tur-imagen {
     border-radius: 10px;
     width: 100%;
+}
+
+.titulo-turismo {
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+@media (max-width: 1100px) {
+    .column {
+        flex: 100%;
+    }
+}
+
+@media (max-width: 670px) {
+    .column2 {
+        flex: 100%;
+    }
+}
+
+.boton-enviar {
+    text-align: center;
 }
 
 /* FIN SECCIÓN TURISMO ENOLÓGICO */
@@ -237,170 +299,179 @@ footer {
 
 /* INICIO SECCION VINOS */
 
-.contenedor{
+.contenedor {
     background-color: F3F0E8;
-    
+
     color: #806930;
-    
-    }
-    .contenedor nav{
-        width: 100%;
-        padding: 15px;
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 20px;
-        background-color: white;
-    }
-    .compra{
-        display: none;
-    }
-    .carrito li{
-        padding: 1rem;
-        font-weight: lighter;
-        font-size: 1rem;
-      
-       
-    }
-    .contenedor nav i{
-        font-size: 2rem;
-        cursor: pointer;
-    }
-    
-    
-    .contenedor nav i:hover .compra{
-        font-size: 1rem;
-        display: flex;
-        justify-content:center;
-        
-    }
-    .contenedor nav i:hover .compra button{
-        padding: 1rem;
-        width: 30%;
-        color:white;
-        font-family: Geneva;
-        font-weight: bold;
-        background-color: #F3F0E8;
-        border: none;
-        outline: none;
-        text-transform: uppercase;
-        font-size: 1,1rem;
-        border-radius: 5px;
-        cursor: pointer; 
-    }
 
-    .contenedor nav i:hover .compra button:hover{
-        background-color:   rgb(190, 72, 53);
-        transition: all .4s;
-    }
-       
-    
-    .carrito i:hover{
-        width: 300px;
-        height: 250px;
-        position: absolute;
-        right: 0;
-        background-color: white;
-        
-    }
-    .contenedor h1{
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 3rem;
-        font-family:  'Courgette', cursive, Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: lighter;
-   
-    }
-    .grid{
-        display: grid;
-        max-width: 1100px;
-        justify-items: center;
-        
-        margin: auto;
-        grid-gap: 20px;
-        grid-template-columns: repeat(4,270px)
-        
-    
-    }
-    .item{
-        text-align: center;
-      line-height: 15px;
-     
-       background-color: white;
-       border: none
-       
-    }
-    
-    .item img{
-       width: 70%;
-       margin-left: 20px;
-       
-    }
-    
-    .info{
-        padding: 20px;
-       
-        
-    }
-    
-    .info h3{
-        font-size: 1.6rem;
-    }
-     .info p{
-        font-size: 1,8rem;
-        padding: 15px;
-     }
-
-.descrip{
-    display: none;
-    
 }
-i:hover .descrip{
+
+.contenedor nav {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.compra {
+    display: none;
+}
+
+.carrito li {
+    padding: 1rem;
+    font-weight: lighter;
+    font-size: 1rem;
+
+
+}
+
+.contenedor nav i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+.contenedor nav i:hover .compra {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.contenedor nav i:hover .compra button {
+    padding: 1rem;
+    width: 30%;
+    color: white;
+    font-family: Geneva;
+    font-weight: bold;
+    background-color: #F3F0E8;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 1, 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedor nav i:hover .compra button:hover {
+    background-color: rgb(190, 72, 53);
+    transition: all .4s;
+}
+
+
+.carrito i:hover {
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    right: 0;
+    background-color: white;
+
+}
+
+.contenedor h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-family: 'Courgette', cursive, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+
+}
+
+.grid {
+    display: grid;
+    max-width: 1100px;
+    justify-items: center;
+
+    margin: auto;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 270px)
+}
+
+.item {
+    text-align: center;
+    line-height: 15px;
+
+    background-color: white;
+    border: none
+}
+
+.item img {
+    width: 70%;
+    margin-left: 20px;
+
+}
+
+.info {
+    padding: 20px;
+
+
+}
+
+.info h3 {
+    font-size: 1.6rem;
+}
+
+.info p {
+    font-size: 1, 8rem;
+    padding: 15px;
+}
+
+.descrip {
+    display: none;
+
+}
+
+i:hover .descrip {
     width: 300px;
     height: auto;
     position: absolute;
-    background-color:rgb(190, 72, 53);
+    background-color: rgb(190, 72, 53);
     text-align: center;
     font-size: 1rem;
     display: flex;
-    justify-content:center;
-
-}
-.descrip p{
-   font-family: 'Courgette', cursive;
-   font-weight:100;
+    justify-content: center;
 
 }
 
-i{
+.descrip p {
+    font-family: 'Courgette', cursive;
+    font-weight: 100;
+
+}
+
+i {
     cursor: pointer;
-    color:  #F3F0E8;
-} 
-     .info span{
-        padding: 15px;
-        font-size:1.5rem;
-        display:flow-root
-     }
+    color: #F3F0E8;
+}
 
-    .info button{
-        padding: 15px;
-        width: 100%;
-        background-color:   #806930;
-        border: none;
-        outline: none;
-        text-transform: uppercase;
-        font-size: 1,1rem;
-        font-family: sans-serif;
-        font-weight: lighter;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-bottom: 15px;
-        margin-top: 15px;
-     }
+.info span {
+    padding: 15px;
+    font-size: 1.5rem;
+    display: flow-root
+}
 
-   .info button:hover{
-        background-color: rgb(190, 72, 53);
-        transition: all .3s;
-    }
+.info button {
+    padding: 15px;
+    width: 100%;
+    background-color: #806930;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 1, 1rem;
+    font-family: sans-serif;
+    font-weight: lighter;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.info button:hover {
+    background-color: rgb(190, 72, 53);
+    transition: all .3s;
+}
 
 /* FIN DE SECCION VINOS */
 

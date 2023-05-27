@@ -2,15 +2,31 @@
 
 * {
     box-sizing: border-box;
-
 }
 
 body {
-    background-color: #F3F0E8;
+    /* background-color: #F3F0E8; */
     padding: 0;
     margin: 0;
     font-family: Montserrat, sans-serif;
+    background-image: url(../img/pexels-jill-wellington-39351.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
 }
+
+.Site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.Site-content {
+    flex: 1;
+}
+
+
 
 li, a {
     /* font-family: 'Courgette', cursive, Verdana, Geneva, Tahoma, sans-serif; */
@@ -37,11 +53,12 @@ header {
     top: 0px;
     font-family: 'Courgette', cursive;
     font-size: 14px;
-    min-height: 1%;
+    /* min-height: 1%; */
     margin: 0;
     padding: 0;
     box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
     /* border: 2px solid red; */
+    height: 9vh;
     background-color: #F3F0E8;
     z-index: 100;
 }
@@ -65,7 +82,7 @@ nav {
 .nav_links li {
 
     display: inline-block;
-    margin: 10px;
+    /* margin: 10px; */
     padding: 0px 20px;
 }
 
@@ -73,8 +90,8 @@ nav {
     transition: all 0.5s ease 0s;
 }
 
-.nav-toggle{
-    color:white;
+.nav-toggle {
+    color: white;
     background-color: rgb(190, 72, 53);
     border: none;
     font-size: 30px;
@@ -84,36 +101,38 @@ nav {
 }
 
 
-@media (max-width: 700px){
-   .nav_links {
-    flex-direction: column;
-    position: fixed;
-    height: auto;
-    width: auto;
-    top: 50px;
-    background:#f0e8d2; 
-    text-align:left
-   }
-   nav .nav_links li{
-    display: block;  
-   }
-  
-   .nav-toggle{
-    display: flex !important;
-    flex-direction: column;
-   }
-   
-   nav button i{
-    cursor: pointer;
-   }
-   nav button i:hover{
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-   }
-   
+@media (max-width: 700px) {
+    .nav_links {
+        flex-direction: column;
+        position: fixed;
+        height: auto;
+        width: auto;
+        top: 50px;
+        background: #f0e8d2;
+        text-align: left
     }
-  
+
+    nav .nav_links li {
+        display: block;
+    }
+
+    .nav-toggle {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    nav button i {
+        cursor: pointer;
+    }
+
+    nav button i:hover {
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
 
 
 .logo {
@@ -149,12 +168,49 @@ nav {
 } */
 
 main {
-    min-height: 10px;
+    /* min-height: calc(100vh - 18vh); */
     color: #806930;
     font-family: 'Great Vibes', cursive;
     font-size: 22px;
-    background-color: #F3F0E8;
+    /* background-color: #F3F0E8; */
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-home {
+    /* border: 2px solid green; */
+    min-height: 100px;
+    width: 90%;
+    margin: 0% 5%;
+    padding: 4%;
+    display: flex;
+    overflow: auto;
+    position: relative;
+    border-radius: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #F3F0E8;
+
+
+}
+
+.contenedor-home::before {
+    content: '';
+    background-image: url(../img/pexels-jill-wellington-39351.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.25;
+    display: flex;
+    overflow: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .header-menubar {
@@ -175,10 +231,43 @@ main {
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 5%;
+
     /* border: 2px solid green; */
     background-color: #F3F0E8;
+    position: relative;
+    background-color: transparent;
 }
+
+
+.contenedor-historia-ppal {
+    /* border: 2px solid red; */
+    margin: 0% 5%;
+    border-radius: 10px;
+    background-color: #F3F0E8;
+    padding-top: 30px;
+    overflow: auto;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.contenedor-historia-ppal:before {
+    content: '';
+    background-image: url(../img/pexels-jill-wellington-39351.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.25;
+    overflow: auto;
+
+}
+
+
+
 
 /* INICIO SECCIÓN TURISMO ENOLÓGICO */
 
@@ -210,6 +299,8 @@ main {
     border-radius: 10px;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: #F3F0E8;
+
 }
 
 .contenedor-turismo::before {
@@ -228,6 +319,7 @@ main {
     overflow: auto;
     flex-direction: row;
     flex-wrap: wrap;
+    /* border: 2px solid red; */
 }
 
 .column {
@@ -296,6 +388,12 @@ main {
     padding-top: 5px;
 }
 
+.titulo-seccion {
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
 @media (max-width: 1100px) {
     .column {
         flex: 100%;
@@ -318,30 +416,64 @@ main {
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 2;
+    border-radius: 10px;
+    margin-top: 20px;
+    /* border: 2px solid red; */
+
+}
+
+.home-imagen {
+    border-radius: 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0.629),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.617);
+
+}
+
+.home-imagen-logo {
+
+    border-radius: 10px;
+
+
 }
 
 .item-item2 {
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: 3;
+    /* border: 2px solid red; */
 }
 
 .item-item3 {
     grid-column-start: 2;
     grid-row-start: 2;
     grid-row-end: 2;
+    /* border: 2px solid red; */
+    padding: 10px;
+    margin: 0;
+
+}
+
+.parrafo-home {
+    padding: 0;
+    margin: 0;
 }
 
 footer {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 30%;
-    margin-right: 30%;
+    /* margin-left: 30%;
+    margin-right: 30%; */
     justify-content: space-evenly;
-    align-content: end;
-    min-height: 50px;
+    align-content: center;
+    margin-top: 50px;
     /* border: 2px solid black; */
     background-color: #F3F0E8;
+    height: 9vh;
+
 }
 
 
@@ -351,7 +483,7 @@ footer {
     background-color: F3F0E8;
 
     color: #806930;
-
+    flex: 1;
 }
 
 .contenedor nav {
@@ -426,36 +558,40 @@ footer {
     font-weight: lighter;
 
 }
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-family: 'Courgette', cursive, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
 
-
-.grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
-    grid-auto-rows: minmax(200px,auto);
-    gap: 20px;
-    padding: 20px;
-    grid-auto-flow: dense;
 }
 
-
-
-/*
 
 .grid {
     display: grid;
-    max-width: 1100px;
-    justify-items: center;
-    margin: auto;
-    grid-gap: 20px;
-    grid-template-columns: repeat(4, 270px)
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+    padding: 20px;
+    grid-auto-flow: dense;
+    margin: 0% 5%;
+    border-radius: 10px;
+    background-color: #F3F0E8;
 }
-*/
+
+
+
+
+
 .item {
     text-align: center;
     line-height: 15px;
 
     background-color: white;
-    border: none
+    border: none;
+
+    border-radius: 10px;
 }
 
 .item img {
@@ -493,6 +629,7 @@ i:hover .descrip {
     font-size: 1rem;
     display: flex;
     justify-content: center;
+    z-index: 120;
 
 }
 
@@ -535,20 +672,34 @@ i {
 }
 
 
-@media (max-width: 768px){
-   .grid{
-    grid-template-columns: repeat(4,250px);
-   }
-}
-@media (max-width: 320px){
-    .grid{
-     grid-template-columns: repeat(4,150px);
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(4, 250px);
     }
- }
+}
+
+@media (max-width: 320px) {
+    .grid {
+        grid-template-columns: repeat(4, 150px);
+    }
+}
 
 
 /* FIN DE SECCION VINOS */
 /* INICIO SECCION CONTACTO */
+
+/* .contenedor-historia-ppal {
+    margin: 0% 5%;
+    border-radius: 10px;
+    background-color: #F3F0E8;
+    padding-top: 30px;
+    overflow: auto;
+    position: relative;
+    overflow-y: hidden;
+} */
+
+
+
 
 .contenedor-contacto {
     margin-right: 10%;
@@ -558,7 +709,26 @@ i {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #dad6cb;
+    background-color: #F3F0E8;
+    border-radius: 10px;
+    overflow: auto;
+    position: relative;
+
+}
+
+.contenedor-contacto:before {
+    content: '';
+    background-image: url(../img/pexels-jill-wellington-39351.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.25;
+    overflow: auto;
 
 }
 
@@ -567,6 +737,7 @@ i {
     border-color: #312812;
     border-style: solid;
     border-width: 1px;
+    z-index: 100;
 }
 
 .item-contacto2 {

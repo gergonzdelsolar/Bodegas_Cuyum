@@ -492,9 +492,14 @@ footer {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
-    background-color: white;
+    background-color: #F3F0E8;
 }
 
+.carrito{
+    padding-bottom: 0;
+    max-width: 100%;
+    margin: 0 auto;
+}
 .compra {
     display: none;
 }
@@ -510,6 +515,7 @@ footer {
 .contenedor nav i {
     font-size: 2rem;
     cursor: pointer;
+    color: rgb(190, 72, 53);
 }
 
 
@@ -521,22 +527,23 @@ footer {
 }
 
 .contenedor nav i:hover .compra button {
+    cursor: pointer;
     padding: 1rem;
-    width: 30%;
+    width: 40%;
     color: white;
     font-family: Geneva;
     font-weight: bold;
-    background-color: #F3F0E8;
+    background-color: rgb(190, 72, 53);
     border: none;
     outline: none;
     text-transform: uppercase;
     font-size: 1, 1rem;
     border-radius: 5px;
-    cursor: pointer;
+    
 }
 
 .contenedor nav i:hover .compra button:hover {
-    background-color: rgb(190, 72, 53);
+    background-color: #806930;
     transition: all .4s;
 }
 
@@ -546,7 +553,7 @@ footer {
     height: 250px;
     position: absolute;
     right: 0;
-    background-color: white;
+    background-color:#F3F0E8;
 
 }
 
@@ -671,16 +678,32 @@ i {
     transition: all .3s;
 }
 
-
-@media (max-width: 768px) {
+@media (min-width:1024){
     .grid {
         grid-template-columns: repeat(4, 250px);
+        justify-content: center;
+       
+    }
+}
+@media (min-width: 481px) and  (max-width:1023px) {
+    .grid {
+        grid-template-columns: repeat(2, 250px);
+        justify-content: center;
+       
     }
 }
 
+@media (min-width:321px) and (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(1,250px);
+        justify-content: center;
+      
+    }
+}
 @media (max-width: 320px) {
     .grid {
-        grid-template-columns: repeat(4, 150px);
+        display: block;
+       
     }
 }
 

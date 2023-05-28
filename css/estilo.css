@@ -30,7 +30,7 @@ body {
 
 li, a {
     /* font-family: 'Courgette', cursive, Verdana, Geneva, Tahoma, sans-serif; */
-    font-size: 14px;
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -42,6 +42,7 @@ a:link, a:visited {
 a:hover {
     background: #f0e8d2;
     text-decoration: none;
+    transition: all .6s;
 }
 
 header {
@@ -52,16 +53,18 @@ header {
     position: sticky;
     top: 0px;
     font-family: 'Courgette', cursive;
-    font-size: 14px;
+    font-size: 15px;
     /* min-height: 1%; */
     margin: 0;
     padding: 0;
-    box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
+    box-shadow: 0 0 0.5rem rgba(219, 69, 10, 0.5);
     /* border: 2px solid red; */
     height: 9vh;
     background-color: #F3F0E8;
     z-index: 100;
 }
+
+
 
 nav {
     /* border: 1px solid red; */
@@ -76,6 +79,8 @@ nav {
 .nav_links {
     list-style: none;
     margin: 0;
+    
+    
     /* border: 2px solid black; */
 }
 
@@ -90,35 +95,65 @@ nav {
     transition: all 0.5s ease 0s;
 }
 
-.nav-toggle {
+.ham {
+    cursor: pointer;
+    margin: 0;
     color: white;
-    background-color: rgb(190, 72, 53);
+    background-color:  rgb(190, 72, 53) ;
     border: none;
     font-size: 30px;
     padding: 0 20px;
-    line-height: 60px;
+    line-height: 50px;
     display: none;
 }
 
 
-@media (max-width: 700px) {
-    .nav_links {
-        flex-direction: column;
-        position: fixed;
-        height: auto;
-        width: auto;
-        top: 50px;
-        background: #f0e8d2;
-        text-align: left
-    }
+/* RESPONSIVE NAVEGADOR*/
 
-    nav .nav_links li {
+
+@media (max-width: 950px) {
+
+    
+    .ham {
         display: block;
+        top:8px;
+        right: 20px;
+        position: absolute;
+        
     }
+    
+    .nav_links {
+        display: none;
+        top: 70px;
+        padding: 20px;
+        background-color:  #f0e8d2;
+        flex-direction:column;
+        position: fixed;
+        align-content: space-around;
+        height: auto
+        
 
-    .nav-toggle {
-        display: flex !important;
-        flex-direction: column;
+    }
+    nav .nav_links li:hover{
+        background:#F3F0E8;
+        transition: .5s;
+    }
+    nav .nav_links li {
+        
+        padding: 10px; 
+    } 
+    .nav_links .activado{
+        display: flex
+    };
+
+
+
+    
+    /*
+    nav .nav_links li {
+        display: none;
+        padding: 10px;
+        
     }
 
     nav button i {
@@ -126,12 +161,20 @@ nav {
     }
 
     nav button i:hover {
+        cursor: pointer;
         font-size: 1rem;
         display: flex;
         justify-content: center;
     }
-
+    
+    .nav_links .activado{
+        display: flex
+    };
+    */
 }
+
+
+
 
 
 

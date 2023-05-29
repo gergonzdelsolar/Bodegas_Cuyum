@@ -481,7 +481,7 @@ footer {
 
 .contenedor {
     background-color: F3F0E8;
-
+    
     color: #806930;
     flex: 1;
 }
@@ -812,32 +812,23 @@ i {
 
 /* API: BUSCADOR DE TRAGOS */
 
-/* *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
 
-body{
-    height: 100vh;
-    background: linear-gradient(#5372f0 50%,#000000 50%);
-} */
 
-.container{
+.container-api{
     margin: 30px;
-    position: relative;
-    /* transform: translate(-50%, -50%); */
-    /* top: 50%;
-    left: 50%; */
-    width: 100vw;
+    /* position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;  */
+    width: 50em;
     background-color: #ffffff;
-    padding: 30%;
-    padding-top: 10%;
+    padding: 2%;
     border-radius: 0.6em;
     box-shadow: 0 1em 3em rgba(2,9,38,0.25 );
     display: flex;
     flex-direction: column;
+    margin: auto;
+    margin-top: 2%;
 
 }
 
@@ -937,7 +928,7 @@ body{
 
 
 @media screen and (max-width: 600px) {
-    .container{
+    .container-api{
         font-size: 14px;
     }
 }

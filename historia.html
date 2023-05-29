@@ -33,7 +33,12 @@
 <body class="Site">
     <header>
         <a href="index.html"><img src="img/Logo_nav.png" alt="Logo" weidth="50" height="50"></a>
-        <nav>
+        <input type="checkbox" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">&#9776;</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+        <nav class="nav">
            
             <ul class="nav_links">
                 <li> <a href="index.html">Inicio</a> </li>
@@ -42,9 +47,7 @@
                 <li> <a href="turismo.html">Turismo enológico</a> </li>
                 <li><a class="contacto" href="formulario.html"><button class="boton">Contacto</button></a></li>
             </ul>
-            <button class="ham" type="button">
-                <i class="fa-solid fa-bars"> </i>
-            </button>
+       
         </nav>
 
     </header>

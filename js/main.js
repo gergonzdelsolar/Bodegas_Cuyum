@@ -9,14 +9,6 @@ const horario = document.getElementById("horario");
 const form = document.getElementById("formulario");
 const parrafo = document.getElementById("warnings");
 
-const ham = document.querySelector(".ham");
-const enlaces =document.querySelector(".nav_links");
-
-
-ham.addEventListener("click", () => {
-    enlaces.classList.toggle(".activado");
-
-});
 
 
 form.addEventListener('submit', e => {
@@ -135,11 +127,3 @@ form.addEventListener('submit', e => {
 });
 
 
-/* navegador */
-
-/*
-
-button.addEventListener("click", () =>{
-    button.classList.toggle("open")
-    })
-*/

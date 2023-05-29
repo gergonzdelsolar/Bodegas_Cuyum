@@ -12,4 +12,5 @@ Bodega Cuyum Website hecha con Html5, css y Javascript. <br>
 Sección "Turismo Enológico" con formulario utilizando la libreria css Bootstrap 5. <br>
 Validación de formulario de visita guiada de seccion Turismo con Javascript y enlazada con api de envio de email mediante la api emailjs.com. <br>
 La sección "Los vinos" y "Turismo Enológico" son responsive con 3 puntos de quiebre para distintos dispositivos y pantallas. <br>
-
+En la sección "Los vinos" en la parte inferior debajo de la galeria de vinos se implementa un buscador de tragos o cocteles. Se implementa el consumo de una api
+ (https://www.thecocktaildb.com/). Se ingresa el nombre de un trago y devuelve su foto, ingredientes e instrucciones de elaboración.
